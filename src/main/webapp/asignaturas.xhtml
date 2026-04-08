@@ -36,11 +36,29 @@
             
             
             <f:facet name ="footer"> 
-                <p:commandButton icon="pi pi-check" value="Save"/>
-                <p:commandButton icon="pi pi-times" value="Cancel" styleClass="ui-button-secondary" style="margin-left: .5em"/>
+                <p:commandButton icon="pi pi-check" value="Guardar"/>
+                <p:commandButton icon="pi pi-times" value="Eliminar" styleClass="ui-button-secondary" style="margin-left: .5em"/>
 
             </f:facet>
         </p:card>
+        
+         <p:dataTable var="asignaturas" value="#{dtBasicView.asignaturas}">
+            <p:column headerText="Código">
+                <h:outputText value="#{asignaturas.codigo}" />
+            </p:column>
+
+            <p:column headerText="Asignatura">
+                <h:outputText value="#{asignaturas.nombre}" />
+            </p:column>
+
+            <p:column headerText="Créditos">
+                <h:outputText value="#{asignaturas.creditos}" />
+            </p:column>
+
+            <p:column headerText="Intensidad">
+                <h:outputText value="#{asignaturas.intensidad}" />
+            </p:column>
+        </p:dataTable>
 
     </h:body>
 </html>
