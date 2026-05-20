@@ -12,6 +12,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.junit.After;
 import org.junit.AfterClass;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -41,10 +42,22 @@ public class AsignaturaDAOTest {
         
         try {
             System.out.println("Insertar");
-            Asignatura asig = new Asignatura("750015C", "FPOE", (byte)3, (byte)3);
+            Asignatura asig = new Asignatura("750014C", "FPOE", (byte)3, (byte)3);
             asignaturaDAO.create(asig);
             this.id = asig.getId();
             System.out.println(this.id);
+            Assert.assertNotNull(asig.getId());
+            
+            System.out.println("Buscar");
+            asig = null;
+            asig = asignaturaDAO.buscarPorCodigo("750014C");
+            Assert.assertEquals("FPOE", asig.getNombre());
+            
+            asig.setNombre("Fund. Prog. 0. Eventos");
+            this.asignaturaDAO.edit(asig);
+            
+            asig = asignaturaDAO.buscarPorCodigo("750014C");
+            Assert.assertEquals("Fund. Prog. 0. Eventos", asig.getNombre());
             
 //        System.out.println("buscarPorCodigo");
 //        String codigo = "";
