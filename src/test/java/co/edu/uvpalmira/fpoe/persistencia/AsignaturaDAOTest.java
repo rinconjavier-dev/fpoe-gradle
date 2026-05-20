@@ -22,6 +22,7 @@ import static org.junit.Assert.*;
  *
  * @author Javier A. Rincón L.
  */
+
 public class AsignaturaDAOTest {
     
     private AsignaturaDAO asignaturaDAO;

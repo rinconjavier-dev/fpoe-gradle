@@ -15,7 +15,6 @@ import java.util.List;
  * @author Javier A. Rincón L.
  */
 
-
 public class AsignaturaDAO extends AbstractDAO<Asignatura> {
 
     public AsignaturaDAO(EntityManagerFactory emf) {
