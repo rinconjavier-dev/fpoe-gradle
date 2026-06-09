@@ -25,6 +25,7 @@ import java.util.List;
  * se implementa la interfaz ILogica (InterfazLogica).
  * 
  */
+
 @ApplicationScoped
 public class LogicaImplementacion implements ILogica {
 
