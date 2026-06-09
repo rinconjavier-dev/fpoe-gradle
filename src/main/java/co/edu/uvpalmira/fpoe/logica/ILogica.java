@@ -21,6 +21,7 @@ import java.util.List;
  *
  */
 
+
 public interface ILogica {
 
     public void crearAsignatura(Asignatura asignatura) throws SQLIntegrityConstraintViolationException, Exception;

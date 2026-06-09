@@ -43,7 +43,7 @@ public class ControladorAsignaturas implements Serializable {
         try {
             this.logica.crearAsignatura(this.asignatura) ;
             FacesContext.getCurrentInstance().addMessage(null,
-                    new FacesMessage("La asignatura fue guardada"));
+                    new FacesMessage("¡La asignatura fue guardada!"));
         } catch (SQLIntegrityConstraintViolationException ex) {
             FacesContext.getCurrentInstance().addMessage(null, 
                     new FacesMessage(FacesMessage.SEVERITY_ERROR,
@@ -52,7 +52,7 @@ public class ControladorAsignaturas implements Serializable {
         } catch (Exception ex) {
             FacesContext.getCurrentInstance().addMessage(null, 
                     new FacesMessage(FacesMessage.SEVERITY_ERROR,
-                            "Error no identificado, contacte con el desarrollador",
+                            "¡Error no identificado, contacte al desarrollador!",
                             ex.getLocalizedMessage()));
             Logger.getLogger(this.getClass().getName()).log(Level.SEVERE, null, ex);
         }
@@ -61,6 +61,6 @@ public class ControladorAsignaturas implements Serializable {
     public void cancelar(){
         this.asignatura = new Asignatura();
         FacesContext.getCurrentInstance().addMessage(
-                null, new FacesMessage("Proceso Cancelado"));
+                null, new FacesMessage("¡El proceso fue cancelado!"));
     }
 }

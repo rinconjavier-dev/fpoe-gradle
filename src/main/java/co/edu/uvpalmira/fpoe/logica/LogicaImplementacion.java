@@ -14,6 +14,7 @@ import jakarta.persistence.PersistenceUnit;
 import java.sql.SQLIntegrityConstraintViolationException;
 import java.util.List;
 
+
 /**
  *
  * @author Javier A. Rincón L.
