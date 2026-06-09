@@ -22,7 +22,6 @@ import java.util.logging.Logger;
  * @author Javier A. Rincón L.
  */
 
-
 @Named(value = "asignCtrl")
 @SessionScoped
 public class ControladorAsignaturas implements Serializable {
@@ -30,6 +29,7 @@ public class ControladorAsignaturas implements Serializable {
     
     @Inject
     private ILogica logica;
+    
     
     public Asignatura getAsignatura() {
         return asignatura;
@@ -39,6 +39,7 @@ public class ControladorAsignaturas implements Serializable {
         return this.logica.buscarAsignaturas();
     }
     
+    // Método de manejador de eventos para acciones como: Guardar, Ejecutar, Eliminar, Etc.
     public void guardar(){
         try {
             this.logica.crearAsignatura(this.asignatura) ;
